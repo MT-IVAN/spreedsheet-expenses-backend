@@ -46,3 +46,5 @@ app.get('/getAccPerDay', async (req, res) => {
 const PORT = process.env.PORT || 3000
 
 app.listen(PORT)
+
+exports = app
