@@ -1,4 +1,4 @@
-import { service } from '../config/google-sheet-config'
+const { service } = require('../config/google-sheet-config')
 
 /**
  * Gets cell values from a Spreadsheet.
@@ -7,7 +7,7 @@ import { service } from '../config/google-sheet-config'
  * @return {obj} spreadsheet information
  */
 
-export async function getValues({
+async function getValues({
   spreadsheetId,
   range,
   upToDay,
@@ -67,7 +67,7 @@ function formatTable(rows) {
   })
 }
 
-export async function appendValues(
+async function appendValues(
   spreadsheetId,
   range,
   values,
@@ -91,7 +91,7 @@ export async function appendValues(
   }
 }
 
-export async function getTotalPerDayByMonth({ month }) {
+async function getTotalPerDayByMonth({ month }) {
   const values = await getValues({
     spreadsheetId: '1Yk24_5hAKPtgJSd3Srtfsia5x2uLF-BKCADB9n74ODk',
     range: `${month}!A12:G100`,
@@ -106,4 +106,10 @@ export async function getTotalPerDayByMonth({ month }) {
     return acc
   }, {})
   return groupedByDate
+}
+
+module.exports = {
+  getValues,
+  appendValues,
+  getTotalPerDayByMonth,
 }
