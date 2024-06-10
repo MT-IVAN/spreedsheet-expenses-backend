@@ -1,4 +1,4 @@
-const { service } = require('../config/google-sheet-config.js')
+const { service } = require('./google-sheet-config')
 
 /**
  * Gets cell values from a Spreadsheet.

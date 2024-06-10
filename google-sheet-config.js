@@ -9,4 +9,5 @@ const service = google.sheets({ version: 'v4', auth })
 
 module.exports = {
   service,
+  auth,
 }

@@ -1,13 +1,14 @@
 const express = require('express')
 const dotenv = require('dotenv')
-
+const { createRequire } = require('node:module')
 dotenv.config()
 
 const {
   getValues,
   appendValues,
   getTotalPerDayByMonth,
-} = require('./services/serviceData.js')
+} = require('./serviceData')
+
 const cors = require('cors')
 const app = express()
 
