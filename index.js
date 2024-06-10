@@ -6,7 +6,7 @@ const {
   getValues,
   appendValues,
   getTotalPerDayByMonth,
-} = require('./serviceData')
+} = require('./services/serviceData')
 
 const cors = require('cors')
 const app = express()

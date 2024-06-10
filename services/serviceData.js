@@ -1,4 +1,4 @@
-import { service } from '../config/google-sheet-config.js'
+import { service } from '../config/google-sheet-config'
 
 /**
  * Gets cell values from a Spreadsheet.
