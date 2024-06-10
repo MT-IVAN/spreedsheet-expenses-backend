@@ -1,6 +1,5 @@
 const express = require('express')
 const dotenv = require('dotenv')
-const { createRequire } = require('node:module')
 dotenv.config()
 
 const {
